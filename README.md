@@ -17,6 +17,8 @@
 **本仓库是项目介绍页**：只放说明、界面截图与配图。
 工具源码在私有仓库，不对外分发。
 
+🌐 **在线介绍页（GitHub Pages）**：<https://jkcode8.github.io/word-format-agent-showcase/>
+
 </div>
 
 ![界面总览](docs/images/01-home.png)
