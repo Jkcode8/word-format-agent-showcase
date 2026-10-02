@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>排版助手 · 横版封面</title>
+<style>
+  :root {
+    --bg: #fcfcfb; --surface: #ffffff; --ink: #171716; --ink2: #3f3f3b;
+    --muted: #777771; --border: #e2e2de; --accent: #1e1e1c; --success: #3f6f56;
+    --display: "方正小标宋简体", "华文中宋", "STZhongsong", "Source Han Serif SC", STSong, SimSun, serif;
+    --ui: "Microsoft YaHei UI", "PingFang SC", "Segoe UI", system-ui, sans-serif;
+    --mono: "Cascadia Mono", Consolas, "Courier New", monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #ffffff; color: var(--ink); font-family: var(--ui); }
+  .cover {
+    width: 1280px; height: 640px; position: relative; overflow: hidden;
+    background: var(--bg); display: grid; grid-template-columns: 560px 1fr;
+    gap: 24px; padding: 62px 56px 46px 62px;
+  }
+  .cover::before { content: ""; position: absolute; inset: 0 0 auto; height: 8px; background: var(--accent); }
+
+  .left { display: flex; flex-direction: column; }
+  .left img.lockup { width: 268px; height: auto; }
+  h1 {
+    margin: 26px 0 0; font-family: var(--display); font-weight: 700; letter-spacing: .01em;
+    font-size: 42px; line-height: 1.32;
+  }
+  .sub { margin: 16px 0 0; color: var(--muted); font-size: 16px; letter-spacing: .02em; }
+  .chips { margin: 22px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+  .chips li {
+    padding: 7px 13px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 999px; font-size: 14px; color: var(--ink2);
+  }
+  .chips li b { color: var(--success); font-weight: 600; }
+  .flow { margin: 18px 0 0; font-size: 14.5px; color: var(--ink2); letter-spacing: .01em; }
+  .flow span { color: var(--muted); margin: 0 8px; }
+  .foot {
+    margin-top: auto; padding-top: 18px; border-top: 1px solid var(--border);
+    font-family: var(--mono); font-size: 13px; color: var(--muted); letter-spacing: .04em;
+  }
+  .foot b { color: var(--ink); font-weight: 600; }
+
+  .right { display: flex; align-items: center; }
+  .shot {
+    width: 100%; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; overflow: hidden; box-shadow: 0 18px 42px rgba(23, 23, 22, .13);
+  }
+  .bar { display: flex; align-items: center; gap: 7px; padding: 10px 14px; border-bottom: 1px solid var(--border); background: #f7f7f5; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: #d8d8d2; }
+  .shot img { display: block; width: 100%; height: auto; }
+</style>
+</head>
+<body>
+<div class="cover" id="cover">
+  <div class="left">
+    <img class="lockup" src="../../品牌资源/lockup-transparent.png" alt="排版助手 FORMAT AGENT">
+    <h1>把格式乱掉的 Word，<br>整理成能直接交的稿子</h1>
+    <p class="sub">本机离线 · 不联网 · 不改动源文件 · 文字零改动校验</p>
+    <ul class="chips">
+      <li>逐段<b>角色判定</b></li>
+      <li>格式写进<b>命名样式</b></li>
+      <li><b>主稿 / 修订稿 / 修改报告</b></li>
+      <li>批量排版 · <b>一键打包</b></li>
+    </ul>
+    <p class="flow">选样式 <span>→</span> 上传 <span>→</span> 核对角色 <span>→</span> 下载三件套</p>
+    <p class="foot"><b>Word Format Agent</b> · 排版助手 · v1.6.0 · 开发者 JK</p>
+  </div>
+  <div class="right">
+    <div class="shot">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <img src="../images/02-review.png" alt="排版助手 · 核对页">
+    </div>
+  </div>
+</div>
+</body>
+</html>
