@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500"
+     role="img" aria-label="Pipeline: choose style and upload, read-only preflight, role labelling, paragraph review, write named styles, deliver the trio">
+  <defs>
+    <style>
+      .stage { fill: #ffffff; stroke: #e3ded6; stroke-width: 1; }
+      .support { fill: #ffffff; stroke: #e3ded6; stroke-width: 1; }
+      .mono { font: 500 11px ui-monospace, "SFMono-Regular", Consolas, monospace; fill: #8a8178; letter-spacing: .16em; }
+      .num { font: 600 13px ui-monospace, "SFMono-Regular", Consolas, monospace; fill: #a49a8e; letter-spacing: .06em; }
+      .t { font: 600 14.5px "Segoe UI", system-ui, "Microsoft YaHei", sans-serif; fill: #1f1d1a; }
+      .s { font: 400 11px "Segoe UI", system-ui, "Microsoft YaHei", sans-serif; fill: #6b6259; }
+      .note { font: 400 12px "Segoe UI", system-ui, "Microsoft YaHei", sans-serif; fill: #6b6259; }
+      .accent { fill: #3f6f52; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c9c2b8"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="500" rx="18" fill="#faf8f5"/>
+
+  <text class="mono" x="24" y="36">FORMAT SEQUENCE</text>
+  <text class="mono" x="976" y="36" text-anchor="end">WORD FORMAT AGENT · PIPELINE</text>
+
+  <g>
+    <rect class="stage" x="20" y="56" width="147" height="96" rx="12"/>
+    <text class="num" x="36" y="82">01</text>
+    <text class="t" x="36" y="106">Pick style &amp; upload</text>
+    <text class="s" x="36" y="128">.docx / .doc / .rtf</text>
+    <text class="s" x="36" y="144">.odt / .wps</text>
+  </g>
+  <g>
+    <rect class="stage" x="184" y="56" width="147" height="96" rx="12"/>
+    <text class="num" x="200" y="82">02</text>
+    <text class="t" x="200" y="106">Read-only preflight</text>
+    <text class="s" x="200" y="128">paragraphs / styles / fields</text>
+    <text class="s" x="200" y="144">tables / sections / revisions</text>
+  </g>
+  <g>
+    <rect class="stage" x="348" y="56" width="147" height="96" rx="12"/>
+    <text class="num" x="364" y="82">03</text>
+    <text class="t" x="364" y="106">Role labelling</text>
+    <text class="s" x="364" y="128">offline rules by default</text>
+    <text class="s" x="364" y="144">optional local model</text>
+  </g>
+  <g>
+    <rect class="stage" x="512" y="56" width="147" height="96" rx="12"/>
+    <text class="num" x="528" y="82">04</text>
+    <text class="t" x="528" y="106">Paragraph review</text>
+    <text class="s" x="528" y="128">see the evidence per row</text>
+    <text class="s" x="528" y="144">fix roles / export map</text>
+  </g>
+  <g>
+    <rect class="stage" x="676" y="56" width="147" height="96" rx="12"/>
+    <text class="num" x="692" y="82">05</text>
+    <text class="t" x="692" y="106">Write named styles</text>
+    <text class="s" x="692" y="128">format body / heading N</text>
+    <text class="s" x="692" y="144">figure / table / toc</text>
+  </g>
+  <g>
+    <rect class="stage" x="840" y="56" width="140" height="96" rx="12"/>
+    <text class="num" x="856" y="82">06</text>
+    <text class="t" x="856" y="106">Deliver the trio</text>
+    <text class="s" x="856" y="128">main / tracked</text>
+    <text class="s" x="856" y="144">change report</text>
+  </g>
+
+  <g stroke="#c9c2b8" stroke-width="1.5" marker-end="url(#arrow)">
+    <line x1="169" y1="104" x2="181" y2="104"/>
+    <line x1="333" y1="104" x2="345" y2="104"/>
+    <line x1="497" y1="104" x2="509" y2="104"/>
+    <line x1="661" y1="104" x2="673" y2="104"/>
+    <line x1="825" y1="104" x2="837" y2="104"/>
+  </g>
+
+  <text class="mono" x="24" y="196">FORMAT SOURCES</text>
+  <g>
+    <rect class="support" x="20" y="208" width="308" height="84" rx="12"/>
+    <text class="t" x="38" y="236">Style library (JSON)</text>
+    <text class="s" x="38" y="258">page geometry + 59 roles:</text>
+    <text class="s" x="38" y="274">font, size, alignment, indent, spacing</text>
+  </g>
+  <g>
+    <rect class="support" x="346" y="208" width="308" height="84" rx="12"/>
+    <text class="t" x="364" y="236">Custom config / import JSON</text>
+    <text class="s" x="364" y="258">tune every role in the panel, or upload</text>
+    <text class="s" x="364" y="274">a FormatSpec and reuse it later</text>
+  </g>
+  <g>
+    <rect class="support" x="672" y="208" width="308" height="84" rx="12"/>
+    <text class="t" x="690" y="236">Word template parsing</text>
+    <text class="s" x="690" y="258">upload a correctly formatted document;</text>
+    <text class="s" x="690" y="274">its effective properties become a spec</text>
+  </g>
+
+  <text class="mono" x="24" y="330">DELIVERABLES</text>
+  <g>
+    <rect class="support" x="20" y="342" width="308" height="76" rx="12"/>
+    <text class="t" x="38" y="370">Main copy</text>
+    <text class="s" x="38" y="392">&lt;name&gt;_排版结果.docx — hand this one in</text>
+  </g>
+  <g>
+    <rect class="support" x="346" y="342" width="308" height="76" rx="12"/>
+    <text class="t" x="364" y="370">Tracked copy</text>
+    <text class="s" x="364" y="392">&lt;name&gt;_排版结果_tracked.docx — accept / reject</text>
+  </g>
+  <g>
+    <rect class="support" x="672" y="342" width="308" height="76" rx="12"/>
+    <text class="t" x="690" y="370">Change report</text>
+    <text class="s" x="690" y="392">&lt;name&gt;_排版结果_report.docx — per paragraph</text>
+  </g>
+
+  <text class="note" x="24" y="452">Source file untouched, byte for byte</text>
+  <circle class="accent" cx="248" cy="448" r="3"/>
+  <text class="note" x="260" y="452">100% local &amp; offline</text>
+  <circle class="accent" cx="386" cy="448" r="3"/>
+  <text class="note" x="398" y="452">Text-change verification</text>
+  <circle class="accent" cx="556" cy="448" r="3"/>
+  <text class="note" x="568" y="452">Stop anytime, finished files stay</text>
+  <text class="mono" x="976" y="452" text-anchor="end">V1.6.0</text>
+</svg>

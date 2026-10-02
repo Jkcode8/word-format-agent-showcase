@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word Format Agent — an offline Word formatting workbench</title>
+<meta name="description" content="Turn a messy Word draft into something you can hand in: per-paragraph role labelling, formatting written into Word named styles, and a deliverable trio (main / tracked / change report). Runs entirely on your machine, never touches the source file.">
+<meta property="og:title" content="Word Format Agent">
+<meta property="og:description" content="An offline Word formatting workbench: per-paragraph role labelling, formatting stored in named styles, three deliverables per document.">
+<meta property="og:url" content="https://jkcode8.github.io/word-format-agent-showcase/en.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jkcode8.github.io/word-format-agent-showcase/%E5%93%81%E7%89%8C%E8%B5%84%E6%BA%90/%E5%B0%81%E9%9D%A2-%E6%A8%AA%E7%89%88-1280x640.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<link rel="alternate" hreflang="zh-CN" href="index.html">
+<link rel="alternate" hreflang="en" href="en.html">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <img src="品牌资源/mark.png" alt="Word Format Agent">
+    <span class="brand">Word Format Agent</span>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#ui">Screens</a>
+      <a href="#flow">Pipeline</a>
+      <a href="#batch">Batch</a>
+      <a href="#tech">Tech</a>
+      <a href="#faq">FAQ</a>
+      <a href="#history">Changelog</a>
+    </nav>
+    <span class="lang"><a href="index.html">中文</a> / <a class="on" href="en.html">English</a></span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <div>
+      <img class="lockup" src="品牌资源/lockup-wide.png" alt="Word Format Agent">
+      <h1>Turn a messy Word draft<br>into something you can hand in</h1>
+      <p class="lead">Upload a document and the workbench runs a read-only preflight, labels every paragraph
+        (heading / body / signature / date / caption / cover / TOC…), lets you fix the labels, then produces a
+        main copy, a tracked copy and a change report.<br>
+        Multi-chapter projects can be processed in one batch — all on your own machine, offline, with the source file untouched.</p>
+      <ul class="chips">
+        <li><b>Per-paragraph</b> role labelling</li>
+        <li>Formatting lives in <b>named styles</b></li>
+        <li><b>Main / tracked / change report</b></li>
+        <li>Batch mode · <b>one-click zip</b></li>
+      </ul>
+      <div class="cta">
+        <a class="btn" href="#ui">See the screens</a>
+        <a class="btn ghost" href="https://github.com/Jkcode8/word-format-agent-showcase">GitHub repo</a>
+      </div>
+    </div>
+    <div class="shot">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <img src="docs/images/02-review.png" alt="Review screen">
+    </div>
+  </div>
+
+  <section id="features">
+    <p class="mono">What it solves</p>
+    <h2>What it solves</h2>
+    <p class="sec-sub">One pipeline covers "messy formatting", "manual fixing by hand" and "deliverables that can be reviewed".</p>
+    <div class="grid g3">
+      <div class="card"><span class="no">01</span><h3>Per-paragraph role labelling</h3>
+        <p>Headings, body text, signature, date, captions, cover, TOC… each row shows <b>the evidence</b>
+          (numbering convention, outline level, named style, position in the document) and can be corrected by hand.</p></div>
+      <div class="card"><span class="no">02</span><h3>Formatting stored in named styles</h3>
+        <p>The output is not hard-formatted: change "format body" or "format heading 2" once in Word's style pane
+          and the whole document follows.</p></div>
+      <div class="card"><span class="no">03</span><h3>Three deliverables</h3>
+        <p>Hand in the <b>main copy</b>; review the <b>tracked copy</b> with Word's accept/reject workflow;
+          check the <b>change report</b> paragraph by paragraph.</p></div>
+      <div class="card"><span class="no">04</span><h3>Text is verified unchanged</h3>
+        <p>Text before and after is compared; if body or protected stories differ, the run fails and nothing is written.</p></div>
+      <div class="card"><span class="no">05</span><h3>Multi-chapter batches</h3>
+        <p>Cover/TOC plus every chapter processed in one go — each file stays independent: no merging,
+          no page renumbering, results grouped by type.</p></div>
+      <div class="card"><span class="no">06</span><h3>Stoppable at any time</h3>
+        <p>"Force stop" halts at the next checkpoint: finished files are still delivered and the task gate is released immediately.</p></div>
+    </div>
+  </section>
+
+  <section id="ui">
+    <p class="mono">Screens</p>
+    <h2>Screens</h2>
+    <p class="sec-sub">A local workbench (bound to 127.0.0.1 only) — everything happens in your browser.</p>
+    <div class="grid g2">
+      <figure><img src="docs/images/01-home.png" alt="Home screen with upload area">
+        <figcaption>Home: pick a style library, drop a document (.docx / .doc / .rtf / .odt / .wps)</figcaption></figure>
+      <figure><img src="docs/images/03-deliverables.png" alt="Finished run with three deliverables">
+        <figcaption>Finished: main copy, tracked copy and change report (process files are folded away)</figcaption></figure>
+    </div>
+    <div class="grid g2" style="margin-top:16px">
+      <figure><img src="docs/images/04-batch.png" alt="Batch results">
+        <figcaption>Batch results: one-click zip, a Markdown/CSV summary table and per-file deliverables</figcaption></figure>
+      <figure><img src="品牌资源/使用说明卡片-精简版-1080.png" alt="One-page cheat sheet">
+        <figcaption>One-page cheat sheet (Chinese) — handy for sharing or printing</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="flow">
+    <p class="mono">Pipeline</p>
+    <h2>Pipeline</h2>
+    <p class="sec-sub">Six deterministic stages; only "role labelling" can optionally call a local model.</p>
+    <figure><img src="docs/images/flow-en.svg" alt="Pipeline: pick style and upload, read-only preflight, role labelling, paragraph review, write named styles, deliver the trio"></figure>
+    <ol class="steps" style="margin-top:22px">
+      <li><b>Pick a style and upload</b>: <code>.docx/.doc/.rtf/.odt/.wps</code> — the last four are converted with the local Word / WPS.</li>
+      <li><b>Read-only preflight</b>: body, headers and footers, footnotes, text boxes, tables, sections, fields and revisions; structures that are kept but not re-flowed are listed.</li>
+      <li><b>Role labelling</b>: offline rules by default (numbering conventions, outline levels, named styles, position); an optional local model can help with tricky paragraphs and falls back automatically when unreachable.</li>
+      <li><b>Paragraph review</b>: only non-body paragraphs are listed by default; filter, search, correct roles, and export the role map for reuse.</li>
+      <li><b>Write named styles</b>: page geometry, headers/footers, TOC, tables and captions are applied consistently; the first level-1 heading is not pushed to a new page and the cover block is left untouched.</li>
+      <li><b>Deliver the trio</b>: TOC / page-number fields are refreshed when Word is free, otherwise they are flagged to update on open.</li>
+    </ol>
+  </section>
+
+  <section id="batch">
+    <p class="mono">Batch</p>
+    <h2>Batch mode (a whole project at once)</h2>
+    <p class="sec-sub">Multi-select or import a folder in the browser, drop a folder onto the executable, or use the CLI.</p>
+    <div class="grid g3">
+      <div class="card"><h3>Multi-select in the browser</h3><p>Pick several files or import a folder, confirm the list and hit "start batch" — it runs straight through.</p></div>
+      <div class="card"><h3>Drag &amp; drop or CLI</h3><p>Drop a folder onto <code>批量排版.bat</code> or the exe, or run <code>exe --batch &lt;dir&gt;</code>.</p></div>
+      <div class="card"><h3>Grouped output</h3><p>Every file stays independent — no merging, no page renumbering — and the whole batch can be downloaded as one zip.</p></div>
+    </div>
+    <pre>_排版结果_&lt;timestamp&gt;/
+  主稿/    &lt;name&gt;_排版结果.docx          (main copy)
+  修订稿/  &lt;name&gt;_排版结果_tracked.docx  (tracked copy)
+  报告/    &lt;name&gt;_排版结果_report.docx   (change report)
+  批量汇总.md / 批量汇总.csv              (batch summary: table + manual-check list)</pre>
+    <p class="note">Per-file Markdown reports and converted <code>.doc</code> files are process artifacts and are kept out of the result folder.</p>
+  </section>
+
+  <section id="tech">
+    <p class="mono">Under the hood</p>
+    <h2>Under the hood</h2>
+    <div class="grid g2">
+      <div class="card"><h3>Engine</h3><p>Python 3.14 + <code>python-docx</code>, editing OOXML directly (styles, paragraphs, fields, sections, revisions). It <b>reads effective properties and writes named styles</b> — no string surgery.</p></div>
+      <div class="card"><h3>Interface</h3><p>A plain HTML/CSS/JS workbench bound to <code>127.0.0.1</code>; tasks run serially and stream their progress live.</p></div>
+      <div class="card"><h3>Packaging</h3><p>PyInstaller (onedir). The distributed build ships bytecode only, with every key left blank for the user to fill in.</p></div>
+      <div class="card"><h3>Quality</h3><p><b>189 self-tests</b> (unit + end-to-end, including a real large document) plus seven version acceptance scripts; text-change verification guards every run.</p></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <p class="mono">FAQ</p>
+    <h2>FAQ</h2>
+    <p class="sec-sub">Click a question to expand it (same items as the cheat-sheet card).</p>
+    <div class="faq">
+      <details open>
+        <summary>Why did the page count change after formatting?</summary>
+        <p>Expected. The template body text is SimSun 12 pt with a minimum line spacing of 26 pt — change the font size
+          or the spacing and the pagination changes with it.</p>
+      </details>
+      <details>
+        <summary>Why are heading styles called "format heading 1" instead of "Heading 1"?</summary>
+        <p>"Heading 1" collides with Word's built-in style: when Word saves after refreshing fields it renames the custom
+          style to "Heading 11 / 21 / 31" and swaps its style ID, so the style table keeps growing. With
+          "format heading N" both the name and the ID stay stable — and the formatting still lives in the style,
+          so one edit updates the whole document.</p>
+      </details>
+      <details>
+        <summary>Headers and footers were not changed — why?</summary>
+        <p>On purpose. The template's header carries that project's name; copying it into another document would be wrong.
+          To migrate header text, configure <code>page.section_overrides</code> for the target document's sections.</p>
+      </details>
+      <details>
+        <summary>The TOC page numbers are wrong when cover/TOC is a separate file</summary>
+        <p>If the cover and TOC live in their own file, the TOC field in that file cannot resolve the chapter page numbers.
+          The tool detects this, <b>skips the refresh and keeps the existing TOC</b>, and lists the file under
+          "needs manual check" in the batch summary — refresh the TOC in the merged document or check it by hand.</p>
+      </details>
+      <details>
+        <summary>A heading was labelled incorrectly</summary>
+        <p>Correct its role in the review table; for documents of the same kind, export the role map and apply it on the
+          next upload.</p>
+      </details>
+      <details>
+        <summary>The fonts look different on a colleague's machine</summary>
+        <p>Deliverables rely on the local installation of Chinese fonts (SimHei, SimSun, FangSong_GB2312 …).
+          Install the same font set on every machine, otherwise Word substitutes them.</p>
+      </details>
+      <details>
+        <summary>"A task is already running"</summary>
+        <p>Tasks run one at a time: wait for the current run to finish (this avoids file and Office process conflicts).
+          For big documents you can also use "force stop": it halts at the next checkpoint and keeps finished files.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="history">
+    <p class="mono">Changelog</p>
+    <h2>Release history</h2>
+    <table>
+      <thead><tr><th>Version</th><th>Highlights</th></tr></thead>
+      <tbody>
+        <tr><td><b>V1.6.0</b></td><td>Fixed footer page numbers being reported as non-SimSun (a header/footer paragraph could not see docDefaults); self-tests 189/189 green</td></tr>
+        <tr><td><b>V1.5.0</b></td><td>Heading styles renamed to "format heading 1–5", ending Word's renaming and style accumulation; table-caption digits back to Times New Roman</td></tr>
+        <tr><td><b>V1.4.9</b></td><td>Batch results split into 主稿 / 修订稿 / 报告 folders; process files moved out of the result folder; TOC refresh skipped when body chapters live elsewhere</td></tr>
+        <tr><td><b>V1.4.7</b></td><td>Batch formatting in the browser (multi-select files / import a folder)</td></tr>
+        <tr><td><b>V1.4.0</b></td><td>Cover / inner cover / signature page / TOC support: cover protected, TOC normalised, front matter sectioned automatically</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="facts">
+      <span>127.0.0.1 only</span><span>No network</span><span>Source file untouched</span><span>Text verified unchanged</span>
+    </div>
+    <p style="margin-top:14px">Word Format Agent · 排版助手 — an internal tool: the source code is not public; this page is
+      a project introduction and UI preview only. All rights reserved; please do not copy, redistribute or use it commercially
+      without permission.</p>
+    <p class="sec-sub" style="margin:0">Developer: JK</p>
+  </div>
+</footer>
+
+</body>
+</html>

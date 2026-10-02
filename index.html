@@ -12,97 +12,9 @@
 <meta property="og:image" content="https://jkcode8.github.io/word-format-agent-showcase/%E5%93%81%E7%89%8C%E8%B5%84%E6%BA%90/%E5%B0%81%E9%9D%A2-%E6%A8%AA%E7%89%88-1280x640.png">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="640">
-<style>
-  :root {
-    --bg: #fcfcfb; --surface: #ffffff; --surface2: #f7f7f5;
-    --ink: #171716; --ink2: #3f3f3b; --muted: #777771;
-    --border: #e2e2de; --border-strong: #c8c8c2;
-    --accent: #1e1e1c; --success: #3f6f56; --warning: #936218;
-    --display: "方正小标宋简体", "华文中宋", "STZhongsong", "Source Han Serif SC", STSong, SimSun, serif;
-    --ui: "Microsoft YaHei UI", "PingFang SC", "Segoe UI", system-ui, sans-serif;
-    --mono: "Cascadia Mono", Consolas, "Courier New", monospace;
-    --w: 1120px;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--ui); line-height: 1.75; }
-  img { max-width: 100%; }
-  a { color: var(--ink); }
-  .wrap { max-width: var(--w); margin: 0 auto; padding: 0 24px; }
-  .mono { font-family: var(--mono); letter-spacing: .14em; font-size: 12.5px; color: var(--muted); text-transform: uppercase; }
-
-  /* 顶栏 */
-  header.nav { position: sticky; top: 0; z-index: 20; background: rgba(252,252,251,.92);
-    backdrop-filter: saturate(160%) blur(8px); border-bottom: 1px solid var(--border); }
-  .nav-in { display: flex; align-items: center; gap: 14px; padding: 12px 0; }
-  .nav-in img { width: 34px; height: 34px; border-radius: 9px; }
-  .nav-in .brand { font-weight: 700; letter-spacing: .01em; }
-  .nav-in nav { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; }
-  .nav-in nav a { font-size: 14px; color: var(--ink2); text-decoration: none; }
-  .nav-in nav a:hover { color: var(--ink); text-decoration: underline; }
-
-  /* 英雄区 */
-  .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 46px; align-items: center; padding: 68px 0 56px; }
-  .hero .lockup { width: 300px; margin-bottom: 26px; }
-  h1 { font-family: var(--display); font-size: 46px; line-height: 1.28; margin: 0; letter-spacing: .01em; }
-  .lead { color: var(--muted); font-size: 17px; margin: 18px 0 0; }
-  .chips { list-style: none; padding: 0; margin: 24px 0 0; display: flex; gap: 10px; flex-wrap: wrap; }
-  .chips li { background: var(--surface); border: 1px solid var(--border); border-radius: 999px;
-    padding: 7px 14px; font-size: 14px; color: var(--ink2); }
-  .chips li b { color: var(--success); }
-  .cta { margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn { display: inline-block; padding: 11px 20px; border-radius: 999px; text-decoration: none;
-    font-size: 15px; border: 1px solid var(--accent); background: var(--accent); color: #fff; }
-  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--border-strong); }
-  .btn:hover { opacity: .88; }
-  .shot { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--surface);
-    box-shadow: 0 20px 46px rgba(23,23,22,.12); }
-  .shot .bar { display: flex; gap: 7px; padding: 10px 14px; background: var(--surface2); border-bottom: 1px solid var(--border); }
-  .shot .dot { width: 10px; height: 10px; border-radius: 50%; background: #d8d8d2; }
-  .shot img { display: block; width: 100%; }
-
-  section { padding: 62px 0; border-top: 1px solid var(--border); }
-  h2 { font-family: var(--display); font-size: 32px; margin: 0 0 8px; letter-spacing: .01em; }
-  h3 { font-size: 19px; margin: 0 0 6px; }
-  p { margin: 0 0 12px; color: var(--ink2); }
-  .sec-sub { color: var(--muted); margin-bottom: 28px; }
-
-  .grid { display: grid; gap: 16px; }
-  .g3 { grid-template-columns: repeat(3, 1fr); }
-  .g2 { grid-template-columns: repeat(2, 1fr); }
-  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; }
-  .card .no { font-family: var(--mono); font-size: 13px; color: var(--muted); }
-  .card p { margin: 6px 0 0; font-size: 15px; }
-
-  figure { margin: 0; }
-  figure img { border: 1px solid var(--border); border-radius: 14px; display: block; }
-  figcaption { margin-top: 10px; font-size: 14px; color: var(--muted); }
-
-  ol.steps { padding-left: 22px; }
-  ol.steps li { margin-bottom: 10px; color: var(--ink2); }
-  ol.steps b { color: var(--ink); }
-  pre { background: var(--surface2); border: 1px solid var(--border); border-radius: 12px;
-    padding: 18px 20px; overflow: auto; font-family: var(--mono); font-size: 13.5px; color: var(--ink2); line-height: 1.7; }
-
-  table { width: 100%; border-collapse: collapse; font-size: 15px; }
-  th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
-  th { font-size: 13px; color: var(--muted); font-weight: 600; letter-spacing: .04em; }
-  td b { color: var(--ink); }
-
-  footer { border-top: 1px solid var(--border); padding: 34px 0 54px; }
-  footer .facts { font-family: var(--mono); font-size: 13px; color: var(--muted); }
-  footer .facts span:not(:last-child)::after { content: "·"; margin: 0 10px; color: var(--border-strong); }
-  .note { background: var(--surface); border-left: 4px solid var(--success); border-radius: 0 12px 12px 0;
-    padding: 16px 20px; color: var(--ink2); }
-
-  @media (max-width: 940px) {
-    .hero { grid-template-columns: 1fr; gap: 32px; padding: 44px 0 36px; }
-    h1 { font-size: 36px; }
-    .g3, .g2 { grid-template-columns: 1fr; }
-    .nav-in nav { display: none; }
-    section { padding: 46px 0; }
-  }
-</style>
+<link rel="alternate" hreflang="zh-CN" href="index.html">
+<link rel="alternate" hreflang="en" href="en.html">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 
@@ -116,8 +28,10 @@
       <a href="#flow">流程</a>
       <a href="#batch">批量</a>
       <a href="#tech">技术</a>
+      <a href="#faq">常见问题</a>
       <a href="#history">版本</a>
     </nav>
+    <span class="lang"><a class="on" href="index.html">中文</a> / <a href="en.html">English</a></span>
   </div>
 </header>
 
@@ -224,6 +138,48 @@
       <div class="card"><h3>界面</h3><p>原生 HTML/CSS/JS 的本地工作台，只监听 <code>127.0.0.1</code>；任务串行执行，事件流实时推送进度。</p></div>
       <div class="card"><h3>交付</h3><p>PyInstaller onedir 打包；分发版内核只保留 <code>.pyc</code>，密钥一律留空、由使用者自己填。</p></div>
       <div class="card"><h3>质量</h3><p><b>189 项自检</b>（单元 + 端到端，含真实大稿）+ 7 个版本验收脚本；排版前后做文字零改动校验。</p></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <p class="mono">FAQ</p>
+    <h2>常见问题</h2>
+    <p class="sec-sub">点开每条看答案（这些也是使用说明卡片里的那几条）。</p>
+    <div class="faq">
+      <details open>
+        <summary>排版后页数变了？</summary>
+        <p>正常。模板正文是宋体 12 磅、行距最小值 26 磅，字号或行距一变，页数就会跟着变。</p>
+      </details>
+      <details>
+        <summary>标题样式为什么叫「格式标题 1」，而不是「标题 1」？</summary>
+        <p>「标题 1」与 Word 内置标题重名：Word 在"刷新域并保存"时会把自定义样式改名成
+          「标题 11 / 21 / 31」并换掉样式 ID，越排越多。改成「格式标题 N」后名字与 ID 都稳定，
+          格式照样写在样式里——改一次、全文生效。</p>
+      </details>
+      <details>
+        <summary>排版后页眉页脚没变？</summary>
+        <p>有意为之。模板页眉写的是模板那个工程的名字，跨文档套用会写错；要迁移页眉文字，请按目标稿的
+          节数配 <code>page.section_overrides</code> 点名覆盖。</p>
+      </details>
+      <details>
+        <summary>目录与正文分册时，目录页码不对？</summary>
+        <p>「封面+目录」单独一份时，目录域在它自己这一份里刷不出章节页码。工具会识别这种情况：
+          <b>跳过目录刷新、保留原目录</b>，并在批量汇总的"需要人工核对"里提示——页码请在合并稿里刷新或人工核对。</p>
+      </details>
+      <details>
+        <summary>某个标题没认对？</summary>
+        <p>在核对页的订正表里改角色即可；同类文档想长期复用，改完点「导出角色表」，下次上传时套用。</p>
+      </details>
+      <details>
+        <summary>别人机器上打开，字体变了？</summary>
+        <p>交付稿依赖终端装有黑体、宋体、仿宋_GB2312 等中文字体；内网请统一安装同一套字体，
+          否则 Word 会用替代字体显示。</p>
+      </details>
+      <details>
+        <summary>提示「已有任务在运行」？</summary>
+        <p>单任务串行：等当前任务结束再提交即可（避免文件与 Office 进程互相干扰）。
+          跑大稿时也可以点「强制停止」，停在下一个检查点、已排好的照常出稿。</p>
+      </details>
     </div>
   </section>
 
