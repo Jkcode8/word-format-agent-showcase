@@ -199,6 +199,7 @@
     <table>
       <thead><tr><th>Version</th><th>Highlights</th></tr></thead>
       <tbody>
+        <tr><td><b>V1.7.1</b></td><td>Fixed a false block: the preflight now only stops on revisions that affect text (insertions/deletions/table structure) and merely reports numbering/format-level revision marks</td></tr>
         <tr><td><b>V1.7.0</b></td><td>Batch formatting reuses a single Word session (6 files: 57 s → 31 s); COM calls now use late binding, so a corrupted pywin32 type-library cache no longer breaks .doc conversion or field refresh</td></tr>
         <tr><td><b>V1.6.0</b></td><td>Fixed footer page numbers being reported as non-SimSun (a header/footer paragraph could not see docDefaults); self-tests 189/189 green</td></tr>
         <tr><td><b>V1.5.0</b></td><td>Heading styles renamed to "format heading 1–5", ending Word's renaming and style accumulation; table-caption digits back to Times New Roman</td></tr>
