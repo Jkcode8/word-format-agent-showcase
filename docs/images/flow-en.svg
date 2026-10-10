@@ -117,5 +117,5 @@
   <text class="note" x="398" y="452">Text-change verification</text>
   <circle class="accent" cx="556" cy="448" r="3"/>
   <text class="note" x="568" y="452">Stop anytime, finished files stay</text>
-  <text class="mono" x="976" y="452" text-anchor="end">V1.7.1</text>
+<text class="mono" x="976" y="452" text-anchor="end">V1.7.2</text>
 </svg>

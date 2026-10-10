@@ -11,7 +11,7 @@
 ![离线](https://img.shields.io/badge/%E7%A6%BB%E7%BA%BF-%E5%85%A8%E7%A8%8B%E6%9C%AC%E6%9C%BA-3f6f52)
 ![平台](https://img.shields.io/badge/Windows-10%2B-1f1d1a)
 ![Python](https://img.shields.io/badge/Python-3.14-3776ab)
-![版本](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-V1.7.1-6b6259)
+![版本](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-V1.7.2-6b6259)
 ![自检](https://img.shields.io/badge/%E8%87%AA%E6%A3%80-189%20%E9%A1%B9%E5%85%A8%E7%BB%BF-3f6f52)
 
 **本仓库是项目介绍页**：只放说明、界面截图与配图。
@@ -98,6 +98,7 @@
 
 | 版本 | 主要变化 |
 | --- | --- |
+| **V1.7.2** | 横向表页不再被转竖：页面方向改为「保持各节原有横竖」，横向节页边距按旋转 90° 折算 |
 | **V1.7.1** | 修「正文没改却被拦下」：预检只拦会影响文字读取的修订，编号/格式级修订改为提示 |
 | **V1.7.0** | 批量共用一个 Word 会话（实测 6 份 57 s → 31 s）；COM 改 late binding，pywin32 类型库缓存损坏也能正常调用 |
 | **V1.6.0** | 修「页脚页码被误判不是宋体」（页脚段落读不到 docDefaults）；自检 189/189 全绿 |

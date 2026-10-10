@@ -121,5 +121,5 @@
   <text class="note" x="330" y="452">文本零改动校验（文字不一致直接判失败）</text>
   <circle class="accent" cx="552" cy="448" r="3"/>
   <text class="note" x="564" y="452">随时"强制停止"，已排好的照常出稿</text>
-  <text class="mono" x="976" y="452" text-anchor="end">V1.7.1</text>
+<text class="mono" x="976" y="452" text-anchor="end">V1.7.2</text>
 </svg>
